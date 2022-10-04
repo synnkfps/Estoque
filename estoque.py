@@ -3,7 +3,7 @@ import datetime
 meses=['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro' , 'dezembro']
 
 ano, mes, dia = str(datetime.date.today()).split('-')
-print(dia, meses(int(mes)-1), ano)
+print(dia, meses[int(mes)-1], ano)
 
 # mes = meses[0]
 
@@ -77,6 +77,9 @@ while not fim:
         print(estoque)
         
     elif opcao == 'fim':
+        for i in meses:
+            exec(rf'estoque{i}.close()')
+            exec(rf'vendas{i}.close()')
         fim = True 
         print(estoque)
         break
