@@ -67,7 +67,7 @@ while not fim:
                 estoque[produto][0]=estoque[produto][0]-qtde
 
                 for i in meses:
-                    exec(rf'vendas{i}.write(f"Produto: {produto}\nPreço R$: {preco}\nEstoque: {quantidade - qtde}\n\n")')
+                    exec(rf'vendas{i}.write(f"Produto: {produto}\nPreço: R${preco}\nEstoque: {quantidade - qtde}\n\n")')
                 
                 print(f'\nO total da compra deu R${preco}')
             else:
